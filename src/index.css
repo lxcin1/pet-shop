@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream text-bark font-sans antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-7 py-3 bg-bark text-cream rounded-full font-medium tracking-wide transition-all duration-300 hover:bg-leaf hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-7 py-3 border border-bark/30 text-bark rounded-full font-medium tracking-wide transition-all duration-300 hover:border-bark hover:bg-bark hover:text-cream hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .section-title {
+    @apply font-display text-3xl md:text-4xl text-bark;
+  }
+  .reveal {
+    @apply opacity-0 translate-y-6 transition-all duration-700 ease-out;
+  }
+  .reveal.is-visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #F2ECE1; }
+::-webkit-scrollbar-thumb { background: #C9A88A; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #8A8276; }
